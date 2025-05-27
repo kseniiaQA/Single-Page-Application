@@ -1,0 +1,225 @@
+-------------------------------------------------------------------------------
+Test set: tests.SPAProjectTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 24.87 s <<< FAILURE! -- in tests.SPAProjectTest
+tests.SPAProjectTest.testPersistenceAfterReload -- Time elapsed: 5.131 s <<< ERROR!
+com.microsoft.playwright.PlaywrightException: 
+Error {
+  message='SyntaxError: missing ) after argument list
+    at eval (<anonymous>)
+    at predicate (eval at evaluate (:234:30), <anonymous>:11:37)
+    at next (eval at evaluate (:234:30), <anonymous>:32:31)
+    at eval (eval at evaluate (:234:30), <anonymous>:42:11)
+    at UtilityScript.evaluate (<anonymous>:236:17)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  name='Error
+  stack='Error: SyntaxError: missing ) after argument list
+    at eval (<anonymous>)
+    at predicate (eval at evaluate (:234:30), <anonymous>:11:37)
+    at next (eval at evaluate (:234:30), <anonymous>:32:31)
+    at eval (eval at evaluate (:234:30), <anonymous>:42:11)
+    at UtilityScript.evaluate (<anonymous>:236:17)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at CRExecutionContext.evaluateWithArguments (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\chromium\crExecutionContext.js:79:33)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processImmediate (node:internal/timers:459:9)
+    at async LongStandingScope._race (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\javascript.js:229:12)
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\frames.js:934:24)
+    at async ProgressController.run (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\progress.js:79:22)
+    at async FrameDispatcher.waitForFunction (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\dispatchers\frameDispatcher.js:266:84)
+    at async LongStandingScope._race (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\dispatchers\dispatcher.js:96:14)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.waitForFunctionImpl(FrameImpl.java:877)
+	at com.microsoft.playwright.impl.PageImpl.lambda$waitForFunction$87(PageImpl.java:1436)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.PageImpl.waitForFunction(PageImpl.java:1435)
+	at pages.TodoPage.addTodo(TodoPage.java:31)
+	at tests.SPAProjectTest.testPersistenceAfterReload(SPAProjectTest.java:70)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message='SyntaxError: missing ) after argument list
+    at eval (<anonymous>)
+    at predicate (eval at evaluate (:234:30), <anonymous>:11:37)
+    at next (eval at evaluate (:234:30), <anonymous>:32:31)
+    at eval (eval at evaluate (:234:30), <anonymous>:42:11)
+    at UtilityScript.evaluate (<anonymous>:236:17)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  name='Error
+  stack='Error: SyntaxError: missing ) after argument list
+    at eval (<anonymous>)
+    at predicate (eval at evaluate (:234:30), <anonymous>:11:37)
+    at next (eval at evaluate (:234:30), <anonymous>:32:31)
+    at eval (eval at evaluate (:234:30), <anonymous>:42:11)
+    at UtilityScript.evaluate (<anonymous>:236:17)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at CRExecutionContext.evaluateWithArguments (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\chromium\crExecutionContext.js:79:33)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processImmediate (node:internal/timers:459:9)
+    at async LongStandingScope._race (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\javascript.js:229:12)
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\frames.js:934:24)
+    at async ProgressController.run (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\progress.js:79:22)
+    at async FrameDispatcher.waitForFunction (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\dispatchers\frameDispatcher.js:266:84)
+    at async LongStandingScope._race (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\dispatchers\dispatcher.js:96:14)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 12 more
+
+tests.SPAProjectTest.testAddAndCompleteTodo -- Time elapsed: 1.234 s <<< ERROR!
+com.microsoft.playwright.PlaywrightException: 
+Error {
+  message='SyntaxError: missing ) after argument list
+    at eval (<anonymous>)
+    at predicate (eval at evaluate (:234:30), <anonymous>:11:37)
+    at next (eval at evaluate (:234:30), <anonymous>:32:31)
+    at eval (eval at evaluate (:234:30), <anonymous>:42:11)
+    at UtilityScript.evaluate (<anonymous>:236:17)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  name='Error
+  stack='Error: SyntaxError: missing ) after argument list
+    at eval (<anonymous>)
+    at predicate (eval at evaluate (:234:30), <anonymous>:11:37)
+    at next (eval at evaluate (:234:30), <anonymous>:32:31)
+    at eval (eval at evaluate (:234:30), <anonymous>:42:11)
+    at UtilityScript.evaluate (<anonymous>:236:17)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at CRExecutionContext.evaluateWithArguments (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\chromium\crExecutionContext.js:79:33)
+    at async LongStandingScope._race (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\javascript.js:229:12)
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\frames.js:934:24)
+    at async ProgressController.run (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\progress.js:79:22)
+    at async FrameDispatcher.waitForFunction (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\dispatchers\frameDispatcher.js:266:84)
+    at async LongStandingScope._race (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\dispatchers\dispatcher.js:96:14)
+    at async DispatcherConnection.dispatch (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\dispatchers\dispatcher.js:361:22)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.waitForFunctionImpl(FrameImpl.java:877)
+	at com.microsoft.playwright.impl.PageImpl.lambda$waitForFunction$87(PageImpl.java:1436)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.PageImpl.waitForFunction(PageImpl.java:1435)
+	at pages.TodoPage.addTodo(TodoPage.java:31)
+	at tests.SPAProjectTest.testAddAndCompleteTodo(SPAProjectTest.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message='SyntaxError: missing ) after argument list
+    at eval (<anonymous>)
+    at predicate (eval at evaluate (:234:30), <anonymous>:11:37)
+    at next (eval at evaluate (:234:30), <anonymous>:32:31)
+    at eval (eval at evaluate (:234:30), <anonymous>:42:11)
+    at UtilityScript.evaluate (<anonymous>:236:17)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  name='Error
+  stack='Error: SyntaxError: missing ) after argument list
+    at eval (<anonymous>)
+    at predicate (eval at evaluate (:234:30), <anonymous>:11:37)
+    at next (eval at evaluate (:234:30), <anonymous>:32:31)
+    at eval (eval at evaluate (:234:30), <anonymous>:42:11)
+    at UtilityScript.evaluate (<anonymous>:236:17)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at CRExecutionContext.evaluateWithArguments (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\chromium\crExecutionContext.js:79:33)
+    at async LongStandingScope._race (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\javascript.js:229:12)
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\frames.js:934:24)
+    at async ProgressController.run (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\progress.js:79:22)
+    at async FrameDispatcher.waitForFunction (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\dispatchers\frameDispatcher.js:266:84)
+    at async LongStandingScope._race (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\dispatchers\dispatcher.js:96:14)
+    at async DispatcherConnection.dispatch (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\dispatchers\dispatcher.js:361:22)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 12 more
+
+tests.SPAProjectTest.testClearCompleted -- Time elapsed: 1.093 s <<< ERROR!
+com.microsoft.playwright.PlaywrightException: 
+Error {
+  message='SyntaxError: missing ) after argument list
+    at eval (<anonymous>)
+    at predicate (eval at evaluate (:234:30), <anonymous>:11:37)
+    at next (eval at evaluate (:234:30), <anonymous>:32:31)
+    at eval (eval at evaluate (:234:30), <anonymous>:42:11)
+    at UtilityScript.evaluate (<anonymous>:236:17)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  name='Error
+  stack='Error: SyntaxError: missing ) after argument list
+    at eval (<anonymous>)
+    at predicate (eval at evaluate (:234:30), <anonymous>:11:37)
+    at next (eval at evaluate (:234:30), <anonymous>:32:31)
+    at eval (eval at evaluate (:234:30), <anonymous>:42:11)
+    at UtilityScript.evaluate (<anonymous>:236:17)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at CRExecutionContext.evaluateWithArguments (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\chromium\crExecutionContext.js:79:33)
+    at async LongStandingScope._race (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\javascript.js:229:12)
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\frames.js:934:24)
+    at async ProgressController.run (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\progress.js:79:22)
+    at async FrameDispatcher.waitForFunction (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\dispatchers\frameDispatcher.js:266:84)
+    at async LongStandingScope._race (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\dispatchers\dispatcher.js:96:14)
+    at async DispatcherConnection.dispatch (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\dispatchers\dispatcher.js:361:22)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.waitForFunctionImpl(FrameImpl.java:877)
+	at com.microsoft.playwright.impl.PageImpl.lambda$waitForFunction$87(PageImpl.java:1436)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.PageImpl.waitForFunction(PageImpl.java:1435)
+	at pages.TodoPage.addTodo(TodoPage.java:31)
+	at tests.SPAProjectTest.testClearCompleted(SPAProjectTest.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message='SyntaxError: missing ) after argument list
+    at eval (<anonymous>)
+    at predicate (eval at evaluate (:234:30), <anonymous>:11:37)
+    at next (eval at evaluate (:234:30), <anonymous>:32:31)
+    at eval (eval at evaluate (:234:30), <anonymous>:42:11)
+    at UtilityScript.evaluate (<anonymous>:236:17)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  name='Error
+  stack='Error: SyntaxError: missing ) after argument list
+    at eval (<anonymous>)
+    at predicate (eval at evaluate (:234:30), <anonymous>:11:37)
+    at next (eval at evaluate (:234:30), <anonymous>:32:31)
+    at eval (eval at evaluate (:234:30), <anonymous>:42:11)
+    at UtilityScript.evaluate (<anonymous>:236:17)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at CRExecutionContext.evaluateWithArguments (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\chromium\crExecutionContext.js:79:33)
+    at async LongStandingScope._race (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\javascript.js:229:12)
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\frames.js:934:24)
+    at async ProgressController.run (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\progress.js:79:22)
+    at async FrameDispatcher.waitForFunction (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\dispatchers\frameDispatcher.js:266:84)
+    at async LongStandingScope._race (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\dispatchers\dispatcher.js:96:14)
+    at async DispatcherConnection.dispatch (C:\Users\KALEKS~1\AppData\Local\Temp\playwright-java-14507808728135149827\package\lib\server\dispatchers\dispatcher.js:361:22)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 12 more
+
